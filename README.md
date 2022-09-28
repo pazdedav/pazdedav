@@ -9,7 +9,7 @@ I am also a public speaker. Check my [decks](https://speakerdeck.com/pazdedav) a
 - 🌱 I’m currently learning C#
 - 👯 I’m looking to collaborate on technical meetups, talks, conferences
 - 💬 Ask me about anything in Azure Infrastructure space, with a special focus on cloud governance, "everything" as Code, (Azure) DevOps
-- 📫 How to reach me: Twitter [@pazdedav](https://twitter.com/pazdedav) or [LinkedIn](https://no.linkedin.com/in/pazdedav)
+- 📫 How to reach me: Twitter [@pazdedav](https://twitter.com/pazdedav)
 - ⚡ Fun fact: None (I am a very serious person) 😄
 
-Learn more about me on [LinkedIn](https://no.linkedin.com/in/pazdedav).
+Learn more about me on [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://no.linkedin.com/in/pazdedav)
