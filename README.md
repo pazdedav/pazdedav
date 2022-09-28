@@ -1,7 +1,7 @@
 ### Hello, I'm David 👋
 
 I work as a Cloud Solution Architect at Microsoft Norway.
-I enjoy learning, you can check my <a href="https://www.credly.com/users/pazdedav/badges" target="_blank"><img src="/credly-logo-mini.png" alt="description" width="128" /></a> profile and my [Azure Heroes badges](https://www.azureheroes.community/user/15479).
+I enjoy learning, you can check my <a href="https://www.credly.com/users/pazdedav/badges" target="_blank"><img src="/credly-logo-mini.png" alt="Credly" width="128" height="63" /></a> profile and my [Azure Heroes badges](https://www.azureheroes.community/user/15479).
 
 
 
