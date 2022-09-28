@@ -1,7 +1,9 @@
 ### Hello, I'm David 👋
 
 I work as a Cloud Solution Architect at Microsoft Norway.
-I enjoy learning, you can check my [Credly profile](https://www.credly.com/users/pazdedav/badges) and my [Azure Heroes badges](https://www.azureheroes.community/user/15479).
+I enjoy learning, you can check my <a href="https://www.credly.com/users/pazdedav/badges" target="_blank"><img src="/credly-logo-mini.png" alt="description" width="128" /></a> profile and my [Azure Heroes badges](https://www.azureheroes.community/user/15479).
+
+
 
 I am also a public speaker. Check my [![decks](/speakerdeck_button_icon_151840.png)](https://speakerdeck.com/pazdedav) decks and my <a href="https://sessionize.com/david-pazdera" target="_blank"><img src="/sessionize-logo-mini.png" alt="description" width="128" /></a> profile.
 
