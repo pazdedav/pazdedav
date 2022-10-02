@@ -7,7 +7,7 @@ I am also a public speaker. Check my [![decks](/speakerdeck_button_icon_151840.p
 
 - 🔭 I’m currently working on large-scale migration projects to Azure and Azure landing zones stuff
 - 🌱 I’m currently learning C# and Terraform
-- 👯 I’m looking to collaborate on technical meetups, talks, conferences
+- 👯 I’m looking to collaborate on technical meetups, talks, conferences. I sometimes blog at [Dev.to](https://dev.to/pazdedav).
 - 💬 Ask me about anything in Azure Infrastructure space, with a special focus on cloud governance, "everything" as Code, (Azure) DevOps
 - 📫 How to reach me: Twitter [@pazdedav](https://twitter.com/pazdedav)
 - ⚡ Fun fact: None (I am a very serious person) 😄
