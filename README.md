@@ -15,6 +15,10 @@ A bit more about me:
 - ⚡ Fun fact: None (I am a very serious person) 😄
 - 🏃🏼‍♂️I become addicted to [Garmin Connect](https://connect.garmin.com/modern/profile/pazdedav) levels & badges, but I do it mostly because I love sports.
 
+I know something about GitHub too:
+
+<img src="github-actions.png" alt="GitHubActions" width="98" height="98"/><img src="github-administration.png" alt="GitHubAdmin" width="98" height="98"/><img src="github-advanced-security.png" alt="GitHubAS" width="98" height="98"/>
+
 --------------------
 
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/pazdedav)
