@@ -13,7 +13,7 @@ A bit more about me:
 - 💬 Ask me about anything in Azure Infrastructure space, with a special focus on cloud governance, "everything" as Code, (Azure) DevOps
 - 📫 How to reach me: Twitter [@pazdedav](https://twitter.com/pazdedav)
 - ⚡ Fun fact: None (I am a very serious person) 😄
-- 🏃🏼‍♂️I become addicted to [Garmin Connect](https://connect.garmin.com/modern/profile/pazdedav) levels & badges, but I do it mostly because I love sports.
+- 🏃🏼‍♂️I became addicted to [Garmin Connect](https://connect.garmin.com/modern/profile/pazdedav) levels & badges, but I do it because I love sports.
 
 I know something about GitHub too:
 
