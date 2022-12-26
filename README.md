@@ -14,15 +14,17 @@ A bit more about me:
 - 📫 How to reach me: Twitter [@pazdedav](https://twitter.com/pazdedav)
 - ⚡ Fun fact: None (I am a very serious person) 😄
 - 🏃🏼‍♂️I became addicted to [Garmin Connect](https://connect.garmin.com/modern/profile/pazdedav) levels & badges, but I do it because I love sports.
+- I am passionate about DevOps and Scrum methodologies:
+<p>
+<a href="https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"><img src="seal-csm.png" alt="CSM" width="98" height="98"/>
 
 I know something about GitHub too:
-
+<p>
 <img src="github-actions.png" alt="GitHubActions" width="98" height="98"/><img src="github-administration.png" alt="GitHubAdmin" width="98" height="98"/><img src="github-advanced-security.png" alt="GitHubAS" width="98" height="98"/>
 
 --------------------
 
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/pazdedav)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pazdedav)
 [![Dev.To](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=red)](https://dev.to/pazdedav)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://no.linkedin.com/in/pazdedav)
 [![Microsoft Learn](https://img.shields.io/badge/Microsoft_Learn-258ffa?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/users/pazdedav/)
