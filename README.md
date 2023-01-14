@@ -42,3 +42,9 @@ This is my Octocat:
 
 <img src="https://user-images.githubusercontent.com/12873988/209225718-1fb64e6f-63dd-40b6-a969-f65d00fd7ba4.png" alt="Octocat" width="300" height="300"/>
 
+--------------------
+
+And this is my 2022 wrap:
+
+<img src="github-2022-wrap.png" alt="GitHub2022Wrap" width="270" height="480"/>
+
