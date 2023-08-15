@@ -48,12 +48,12 @@ I know something about GitHub too:
 ---
 ## View my verified badges
 <!--START_SECTION:badges-->
-[![GitHub Advanced Security](https://images.credly.com/size/110x110/images/9e11274d-1ac0-48c1-9d47-e72f16cd2e3d/image.png)](http://www.credly.com/badges/e3021206-4969-4142-87c8-e4fab7509e74 "GitHub Advanced Security")
-[![GitHub Administration](https://images.credly.com/size/110x110/images/2787e1d9-afd8-4226-8558-52a4d0fff528/image.png)](http://www.credly.com/badges/7a677fb7-a3b6-46c8-b1a1-53b8c649b1ac "GitHub Administration")
+[![GitHub Advanced Security](https://images.credly.com/size/110x110/images/ab23e6b1-d5ba-48ee-a3ba-71849e0ac637/image.png)](http://www.credly.com/badges/d090e8d5-d867-49c1-aa97-ec3a66e6b646 "GitHub Advanced Security")
+[![GitHub Administration](https://images.credly.com/size/110x110/images/a5e9bdf5-be98-4896-afd2-eff09e511667/image.png)](http://www.credly.com/badges/52e3c6f4-c9ee-4643-b1dd-245945f374cd "GitHub Administration")
 [![Kusto Detective Agency - Case #1 Badge](https://images.credly.com/size/110x110/images/14d53c52-2701-4045-9f89-e5e510eee2fd/image.png)](http://www.credly.com/badges/15d16a99-ee77-4403-848e-3e6b2c4b81cd "Kusto Detective Agency - Case #1 Badge")
 [![Kusto Detective Agency - Onboarding](https://images.credly.com/size/110x110/images/84201552-025f-4b97-81c4-55be4ba896ff/image.png)](http://www.credly.com/badges/4f6ca668-a52c-4d42-9c23-deea219d6af7 "Kusto Detective Agency - Onboarding")
 [![Challenge Explorer (1 hands-on lab completed)](https://images.credly.com/size/110x110/images/bc2ee1c1-5002-4451-bcaa-a40ee2e16e9b/LODS-Badge-Motivation-Explorer.png)](http://www.credly.com/badges/092deb07-d6de-42b9-b2f8-2b33f1924575 "Challenge Explorer (1 hands-on lab completed)")
-[![GitHub Actions](https://images.credly.com/size/110x110/images/50ac5cb1-f13a-4859-a480-a567f3bad4ca/image.png)](http://www.credly.com/badges/61b500f7-ded4-48f1-8e47-bb3057bc4923 "GitHub Actions")
+[![GitHub Actions](https://images.credly.com/size/110x110/images/556afa03-8682-4e3a-9975-b588b7aa5ba0/image.png)](http://www.credly.com/badges/64e9e46a-f17f-4d2a-a6f1-de5e6ed8a4af "GitHub Actions")
 [![Microsoft Global Hackathon 2022](https://images.credly.com/size/110x110/images/c7e9e836-0b6f-410d-b5fb-48297aa9c310/image.png)](http://www.credly.com/badges/94a0854a-dc0d-4b64-8c76-2abe37238fa7 "Microsoft Global Hackathon 2022")
 [![Streak Level One](https://images.credly.com/size/110x110/images/770d1ed5-aa66-418d-8c0e-45b9f6fe33a0/image.png)](http://www.credly.com/badges/99cb723b-84b8-4e05-bac0-ebc6807246ba "Streak Level One")
 [![OpenHack: Serverless](https://images.credly.com/size/110x110/images/264dc5c5-4525-4ac2-8bc7-6525aba8493a/Serverless.png)](http://www.credly.com/badges/7c114c7c-ca2b-4941-b230-f8f6be10939e "OpenHack: Serverless")
