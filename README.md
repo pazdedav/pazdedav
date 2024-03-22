@@ -38,11 +38,10 @@ I know something about GitHub too:
 ---
 ## Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- [Managing VM configuration with Azure native tools](https://pazdedav.blog/2024/03/06/managing-vm-configuration-with-azure-native-tools/)
-- [Building Christmas baking factory for crispy custom images](https://pazdedav.blog/2023/12/02/building-christmas-baking-factory-for-crispy-custom-images/)
-- [BenchPress: a must-have tool to test your Bicep muscles](https://pazdedav.blog/2023/09/11/benchpress-a-must-have-tool-to-test-your-bicep-muscles/)
-- [AVD Accelerator: Lessons learned](https://pazdedav.blog/2023/04/21/avd-accelerator-lessons-learned/)
 - [vNext Management and Automation of cloud and hybrid workloads](https://dev.to/pazdedav/vnext-management-and-automation-of-cloud-and-hybrid-workloads-46l5)
+- [Build your own templates for Azure Developer CLI](https://dev.to/pazdedav/build-your-own-templates-for-azure-developer-cli-1opn)
+- [Azure Native Infrastructure as Code for Advanced Practitioners](https://dev.to/pazdedav/azure-native-infrastructure-as-code-for-advanced-practitioners-4gpk)
+- [Using Azure Express Route for online data transfers](https://dev.to/pazdedav/using-azure-express-route-for-online-data-transfers-4i9e)
 <!-- BLOG-POST-LIST:END -->
 
 ---
