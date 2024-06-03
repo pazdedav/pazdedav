@@ -13,7 +13,7 @@ A bit more about me:
 
 - 🔭 I’m currently working on large-scale migration projects to Azure and Azure landing zones stuff
 - 🌱 I’m learning C# and Terraform
-- 👯 I’m looking to collaborate on technical meetups, talks, conferences. I ocassionally blog at [Dev.to](https://dev.to/pazdedav).
+- 👯 I’m looking to collaborate on technical meetups, talks, conferences. I ocassionally write at [my blog](https://azurescholar.cloud).
 - 💬 Ask me about anything in Azure Infrastructure space, with a special focus on cloud governance, "everything" as Code, (Azure) DevOps
 - 📫 How to reach me: Twitter [@pazdedav](https://twitter.com/pazdedav)
 - ⚡ Fun fact: None (I am a very serious person) 😄
