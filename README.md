@@ -1,6 +1,6 @@
 # Hello there, I'm David 👋
 
-I work as a Principal Cloud & DevOps Architect at Devoteam M Cloud Norway.
+I work as a Principal Solution Architect at Cegal Norway.
 I enjoy learning, you can check my [Credly profile](https://www.credly.com/users/pazdedav/badges), my [Azure Heroes badgers](https://www.azureheroes.community/user/15479), and my [Microsoft Learn](https://learn.microsoft.com/en-us/users/pazdedav/) profile.
 
 I am particularly passionate about Azure architecture, security, and DevOps:
