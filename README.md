@@ -48,6 +48,7 @@ I know something about GitHub too:
 ---
 ## View my verified badges
 <!--START_SECTION:badges-->
+[![Jumpstart problem solver](https://images.credly.com/size/110x110/images/7fd31f74-921d-43a2-806a-d7fbffc6eb95/blob)](http://www.credly.com/badges/8f42decd-6f68-4159-8fd6-7ca37be284d9 "Jumpstart problem solver")
 [![GitHub Advanced Security](https://images.credly.com/size/110x110/images/c9ed294b-f8ac-48fa-a8c3-96dab1f110f2/image.png)](http://www.credly.com/badges/6547ff1c-5831-420f-80da-8a70de76fbcc "GitHub Advanced Security")
 [![GitHub Administration](https://images.credly.com/size/110x110/images/34880f37-8ec8-4542-a78a-73ba6647208e/image.png)](http://www.credly.com/badges/4a59f177-8ac4-43d3-b718-6a63cf3be2cd "GitHub Administration")
 [![Kusto Detective Agency - Case #1 Badge](https://images.credly.com/size/110x110/images/14d53c52-2701-4045-9f89-e5e510eee2fd/image.png)](http://www.credly.com/badges/15d16a99-ee77-4403-848e-3e6b2c4b81cd "Kusto Detective Agency - Case #1 Badge")
