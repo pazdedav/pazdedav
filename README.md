@@ -38,11 +38,11 @@ I know something about GitHub too:
 ---
 ## Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [Azure Blueprints are dead: long live Specs and Stacks?](https://azurescholar.cloud/azure-blueprints-are-dead-long-live-specs-and-stacks)
 - [Azure Verified Modules and private modules: a powerful combo](https://azurescholar.cloud/azure-verified-modules-and-private-modules-a-powerful-combo)
 - [Managing VM configuration with Azure native tools](https://azurescholar.cloud/managing-vm-configuration-with-azure-native-tools)
 - [BenchPress: a must-have tool to test your Bicep muscles](https://azurescholar.cloud/benchpress-a-must-have-tool-to-test-your-bicep-muscles)
 - [AVD Accelerator: Lessons learned](https://azurescholar.cloud/avd-accelerator-lessons-learned)
-- [vNext Management and Automation of cloud and hybrid workloads](https://dev.to/pazdedav/vnext-management-and-automation-of-cloud-and-hybrid-workloads-46l5)
 <!-- BLOG-POST-LIST:END -->
 
 ---
