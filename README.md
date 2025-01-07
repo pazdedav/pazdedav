@@ -33,7 +33,7 @@ I know something about GitHub too:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://no.linkedin.com/in/pazdedav)
 [![Microsoft Learn](https://img.shields.io/badge/Microsoft_Learn-258ffa?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/users/pazdedav/)
 [![decks](/speakerdeck_button_icon_151840.png)](https://speakerdeck.com/pazdedav)
-[![Sessionize](/sessionize-logo-mini.png)](https://sessionize.com/david-pazdera)
+[![Sessionize](/sessionize-logo-mini.png)](https://sessionize.com/pazdedav)
 
 ---
 ## Latest Blog Posts
