@@ -1,0 +1,120 @@
+name: Bicep CD Workflow
+
+on:
+  workflow_call:
+    inputs:
+      bicepTemplatePath:
+        description: 'Path to the Bicep deployment template file'
+        required: false
+        type: string
+        default: 'infrastructure/deploy.bicep'
+      parametersFilePath:
+        description: 'Path to the Bicep parameters file'
+        required: false
+        type: string
+        default: 'infrastructure/deploy.bicepparam'
+      deploymentScope:
+        description: 'Deployment scope (subscription, resourceGroup, managementGroup)'
+        required: false
+        type: string
+        default: 'subscription'
+      deploymentLocation:
+        description: 'Deployment location'
+        required: false
+        type: string
+        default: 'norwayeast'
+      managementGroupId:
+        description: 'Only for MG-level deployments'
+        required: false
+        type: string
+        default: ''
+      resourceGroupName:
+        description: 'Only for RG-level deployments'
+        required: false
+        type: string
+        default: ''
+      useEnvironment:
+        description: 'Are you using GitHub Environments for manual approval before deployment?'
+        required: false
+        type: string
+        default: 'false'
+    secrets:
+      AZURE_CLIENT_ID:
+        required: true
+      AZURE_TENANT_ID:
+        required: true
+      AZURE_SUBSCRIPTION_ID:
+        required: true
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}
+
+env:
+  MG_ID: ${{ inputs.deploymentScope == 'managementGroup' && inputs.managementGroupId || '' }}
+  RG_NAME: ${{ inputs.deploymentScope == 'resourceGroup' && inputs.resourceGroupName || '' }}
+
+jobs:
+  whatif-validate:
+    runs-on: ubuntu-latest
+    name: What-If Validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Log in to Azure
+        uses: azure/login@v2.3.0
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Bicep What-If
+        uses: azure/bicep-deploy@v2.2.0
+        with:
+          type: deployment
+          operation: whatIf
+          validation-level: provider
+          name: whatif-bicep-${{ github.run_number }}
+          scope: ${{ inputs.deploymentScope }}
+          subscription-id: ${{ inputs.deploymentScope == 'managementGroup' && '' || secrets.AZURE_SUBSCRIPTION_ID }}
+          management-group-id: ${{ env.MG_ID }}
+          resource-group-name: ${{ env.RG_NAME }}
+          template-file: ${{ inputs.bicepTemplatePath }}
+          parameters-file: ${{ inputs.parametersFilePath }}
+          location: ${{ inputs.deploymentLocation }}
+
+  deploy-bicep:
+    needs: [ whatif-validate ]
+    runs-on: ubuntu-latest
+    name: Deploy Bicep template
+    if: github.ref == 'refs/heads/main'
+    environment: ${{ inputs.useEnvironment == 'true' && 'prod' || '' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Log in to Azure
+        uses: azure/login@v2.3.0
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Bicep Deployment
+        uses: azure/bicep-deploy@v2.2.0
+        with:
+          type: deployment
+          operation: create
+          name: deploy-bicep-${{ github.run_number }}
+          scope: ${{ inputs.deploymentScope }}
+          subscription-id: ${{ inputs.deploymentScope == 'managementGroup' && '' || secrets.AZURE_SUBSCRIPTION_ID }}
+          management-group-id: ${{ env.MG_ID }}
+          resource-group-name: ${{ env.RG_NAME }}
+          template-file: ${{ inputs.bicepTemplatePath }}
+          parameters-file: ${{ inputs.parametersFilePath }}
+          location: ${{ inputs.deploymentLocation }}
