@@ -1,0 +1,192 @@
+name: Bicep CI Workflow
+
+on:
+  workflow_call:
+    inputs:
+      bicepTemplatePath:
+        description: 'Path to the Bicep deployment template file'
+        required: false
+        type: string
+        default: 'infrastructure/deploy.bicep'
+      parametersFilePath:
+        description: 'Path to the Bicep parameters file'
+        required: false
+        type: string
+        default: 'infrastructure/deploy.bicepparam'
+      deploymentScope:
+        description: 'Deployment scope (subscription, resourceGroup, managementGroup)'
+        required: false
+        type: string
+        default: 'subscription'
+      managementGroupId:
+        description: 'Only for MG-level deployments'
+        required: false
+        type: string
+        default: ''
+      resourceGroupName:
+        description: 'Only for RG-level deployments'
+        required: false
+        type: string
+        default: ''
+      deploymentLocation:
+        description: 'Deployment location'
+        required: false
+        type: string
+        default: 'norwayeast'
+      preflightValidation:
+        description: 'Enable preflight validation job'
+        required: false
+        type: string
+        default: 'enabled'
+      securityScanning:
+        description: 'Enable security scanning job'
+        required: false
+        type: string
+        default: 'enabled'
+      psRuleScanning:
+        description: 'Enable PSRule scanning job'
+        required: false
+        type: string
+        default: 'enabled'
+    secrets:
+      AZURE_CLIENT_ID:
+        required: true
+      AZURE_TENANT_ID:
+        required: true
+      AZURE_SUBSCRIPTION_ID:
+        required: true
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}
+
+env:
+  MG_ID: ${{ inputs.deploymentScope == 'managementGroup' && inputs.managementGroupId || '' }}
+  RG_NAME: ${{ inputs.deploymentScope == 'resourceGroup' && inputs.resourceGroupName || '' }}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint Bicep Template
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Lint Bicep template
+        run: |
+          az bicep build --file ${{ inputs.bicepTemplatePath }}
+        shell: bash
+
+  validate:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: ${{ inputs.preflightValidation == 'enabled' }}
+    name: Validate Bicep template
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Log in to Azure
+        uses: azure/login@v2.3.0
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Bicep Preflight
+        uses: azure/bicep-deploy@v2.2.0
+        with:
+          type: deployment
+          operation: validate
+          validation-level: provider
+          name: validate-bicep-${{ github.run_number }}
+          scope: ${{ inputs.deploymentScope }}
+          subscription-id: ${{ inputs.deploymentScope == 'managementGroup' && '' || secrets.AZURE_SUBSCRIPTION_ID }}
+          management-group-id: ${{ env.MG_ID }}
+          resource-group-name: ${{ env.RG_NAME }}
+          template-file: ${{ inputs.bicepTemplatePath }}
+          parameters-file: ${{ inputs.parametersFilePath }}
+          location: ${{ inputs.deploymentLocation }}
+
+  security-scan:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: ${{ inputs.securityScanning == 'enabled' }}
+    name: IaC Security Scanning
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+
+      - name: "Run PSRule Security Analysis"
+        uses: microsoft/ps-rule@v2.9.0
+        continue-on-error: true
+        with:
+          modules: "PSRule.Rules.Azure"
+          baseline: "Azure.Pillar.Security"
+          inputPath: "${{ inputs.bicepTemplatePath }}"
+          outputFormat: Csv
+          outputPath: "infrastructure/PSRule-security-output.csv"
+          option: "${{ github.workspace }}/ps-rule.yaml" # Path to PSRule configuration options file
+          source: "${{ github.workspace }}/.ps-rule/" # Path to folder containing suppression rules to use for analysis.
+          summary: true
+
+  psrule:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: ${{ inputs.psRuleScanning == 'enabled' }}
+    name: PSRule Validation
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+
+      - name: "Run PSRule validation"
+        uses: microsoft/ps-rule@v2.9.0
+        continue-on-error: true
+        with:
+          modules: "PSRule.Rules.Azure"
+          baseline: "Azure.Default"
+          inputPath: "${{ inputs.bicepTemplatePath }}"
+          outputFormat: Csv
+          outputPath: "infrastructure/PSRule-scanning-output.csv"
+          option: "${{ github.workspace }}/ps-rule.yaml" # Path to PSRule configuration options file
+          source: "${{ github.workspace }}/.ps-rule/" # Path to folder containing suppression rules to use for analysis.
+          summary: true
+
+  what-if:
+    needs: [validate, security-scan, psrule]
+    if: ${{ always() && !failure() && !cancelled() && github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    name: Bicep What-If
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Log in to Azure
+        uses: azure/login@v2.3.0
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Bicep What-If
+        id: whatif
+        uses: azure/bicep-deploy@v2.2.0
+        with:
+          type: deployment
+          operation: whatIf
+          validation-level: provider
+          name: validate-bicep-${{ github.run_number }}
+          scope: ${{ inputs.deploymentScope }}
+          subscription-id: ${{ inputs.deploymentScope == 'managementGroup' && '' || secrets.AZURE_SUBSCRIPTION_ID }}
+          management-group-id: ${{ env.MG_ID }}
+          resource-group-name: ${{ env.RG_NAME }}
+          template-file: ${{ inputs.bicepTemplatePath }}
+          parameters-file: ${{ inputs.parametersFilePath }}
+          location: ${{ inputs.deploymentLocation }}
