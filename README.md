@@ -5,7 +5,7 @@ I enjoy learning, you can check my [Credly profile](https://www.credly.com/users
 
 I am particularly passionate about Azure architecture, security, and DevOps:
 <p>
-<img src="azure-solutions-architect-expert-600x600.png" alt="ArchitectExpert" width="98" height="98"/><img src="azure-security-engineer-associate600x600.png" alt="SecurityEngineer" width="98" height="98"/><img src="CERT-Expert-DevOps-Engineer-600x600.png" alt="DevOpsEngineer" width="98" height="98"/><img src="sc-100-logo.png" alt="DevOpsEngineer" width="98" height="98"/>
+<img src="azure-solutions-architect-expert-600x600.png" alt="ArchitectExpert" width="98" height="98"/><img src="azure-security-engineer-associate600x600.png" alt="SecurityEngineer" width="98" height="98"/><img src="CERT-Expert-DevOps-Engineer-600x600.png" alt="DevOpsEngineer" width="98" height="98"/><img src="sc-100-logo.png" alt="Cybersecurity Architect" width="200" height="200"/>
 
 
 I am also a public speaker. Check my [SpeakerDeck](https://speakerdeck.com/pazdedav) decks and my [Sessionize](https://sessionize.com/pazdedav) profile.
